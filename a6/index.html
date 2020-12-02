@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eunsong Kim</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><p>Song's portfolio</p></a>
+        <nav>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+                <li><a href="#contact" onclick="toggleMenu();" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Hello!</h2>
+            <img src="img/name.png" alt="name img"><br>
+            <a href="#about" class="btn">More</a>
+        </div>
+    </section>  
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout</h2>
+                <p>As a creative web designer with a background in art and marketing, I’m passionate about providing creative, engaging and user-friendly experience.</p><br> <p>I am proficient in HTML5, CSS3, responsive design, Java Script, jQuery, and always willing to learn new technology.</p><br>
+                <p>I am ready for new challenges!</p>
+            </div>  
+        
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/img1.jpg" alt="">
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+        <div class="title">
+            <h2 class="titleText"><span>W</span>ork</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem!</p>
+        </div>
+
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/work1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lorem, ipsum.</h3>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/work2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lorem, ipsum.</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/work3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lorem, ipsum.</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/work4.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lorem, ipsum.</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/work5.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lorem, ipsum.</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/work6.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Lorem, ipsum.</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section> 
+
+
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText">Contact</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem!</p>
+        </div>
+        <div class="contactForm">
+            <h3> Send Message</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Name"></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send">
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyrightText">
+        <p>2020 Eunsong Kim</p>
+    </footer>
+
+
+    <script text="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
