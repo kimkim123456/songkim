@@ -382,4 +382,8 @@ section{
         font-size: 2.2em;
         color: #FAFAFA;
     }
+
+    .banner .content img{
+        width: 70%;
+    }
 }
