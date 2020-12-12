@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cute cat May</title>
+</head>
+<body>
+    
+    <div id="toggleIcon" onclick="menuToggle()"></div>
+    <div class="logo"><a href="index.html"><p>logo</p></a></div>
+    <div class="hello"><a href="index.html">Cute May</a></div>
+    <div id="menu-overlay">
+        <ul>
+            <li><a href="#page1" onclick="menuToggle()">Home</a></li>
+            <li><a href="#page2" onclick="menuToggle()">About</a></li>
+            <li><a href="#page3" onclick="menuToggle()">May's story</a></li>
+            <li><a href="#page4" onclick="menuToggle()">Gallery</a></li>
+        </ul>
+    </div>
+
+    <section id = "page1" class="video-background">
+        <video src="img/may-video-background.mp4" autoplay="" muted="" loop=""></video>
+    </section>
+
+    <section id="page2">
+        <div>
+           <h2>About May</h2>
+           <div class="page2_wrapper">
+            <div class="page2-may"><img src="img/may2.jpg" alt=""></div>
+                <ul>
+                    <li><p>8 years old</p></li>
+                    <li>Tuxedo cat</li>
+                    <li>Female</li>
+                    <li>Cute</li>
+                    <li>Chobby</li>
+                    <li>Beautiful</li>
+                </ul>
+            </div>
+       </div>
+   </section>
+
+<section id="page3">
+    <h2>May story</h2>
+    <div>
+       <ul>
+           <li>
+               <div class="content">
+                   <h2></h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero exercitationem labore accusamus, perspiciatis veniam incidunt cumque molestiae sequi explicabo nemo dignissimos suscipit officia ducimus, iusto commodi aliquam quibusdam itaque.</p>
+               </div>
+           </li>
+           <li>
+            <div class="content">
+                <h2></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio totam quia aliquam suscipit ipsa perspiciatis, porro eius sapiente enim cum facere praesentium blanditiis laborum explicabo quas animi rerum vitae officia.</p>
+            </div>
+           </li>
+           <li>
+            <div class="content">
+                <h2></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, suscipit soluta. Consequuntur rerum debitis, deleniti atque, recusandae saepe doloribus voluptate incidunt eos ab molestiae minima culpa illo, dicta perferendis cupiditate.</p>
+            </div>
+           </li>
+       </ul>
+   </div>
+</section>
+
+<section id="page4">   
+    <h2>Gallery</h2>
+    <div class="container">
+        <div class="box a"></div>
+        <div class="box b"></div>
+        <div class="box c"></div>
+        <div class="box d"></div>
+        <div class="box e"></div>
+        <div class="box f"></div>
+        <div class="box g"></div>
+        <div class="box h"></div>
+        <div class="box i"></div>
+        <div class="box j"></div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    function menuToggle(){
+        
+        var nav = document.getElementById('menu-overlay');
+        nav.classList.toggle('active');
+       
+        var nav = document.getElementById('toggleIcon');
+        nav.classList.toggle('active');
+       
+    }
+
+    let video = document.querySelector('video');
+    window.addEventListener('scroll', function(){
+        let value = 1 + window.scrollY/ -600;
+        video.style.opacity = value;
+    })
+
+   
+    
+</script>
+</body>
+</html>
