@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eunsong Kim</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><p>Song's portfolio</p></a>
+        <nav>
+            <div class="menuToggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+                <li><a href="#reservation" onclick="toggleMenu();">Reservation</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About us</a></li>
+                <li><a href="#event" onclick="toggleMenu();" >Events & Activities</a></li>
+                <li><a href="#gallery" onclick="toggleMenu();" >Gallery</a></li>
+                <li><a href="#" onclick="toggleMenu();" >My page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Welcome<br>to<br>MUKO</h2>
+        </div>
+    </section>  
+
+    <section class="reservation" id="reservation">
+        <div class="row">
+            <div class="col150">
+                <h2 class="titleText">Reservation</h2>
+                <img src="img/resevation-bg.jpg" alt="">
+            </div>
+            <div class="col150"><form action="reservation.php" method="post">
+                <div class="elem-group inlined">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required>
+                </div>
+                <div class="elem-group inlined">
+                  <label for="email">Your E-mail</label>
+                  <input type="email" id="email" name="visitor_email" placeholder="" required>
+                </div>
+                <div class="elem-group inlined">
+                  <label for="phone">Your Phone</label>
+                  <input type="tel" id="phone" name="visitor_phone" placeholder="123-456-7890" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                </div>
+                <div class="elem-group inlined">
+                    <label for="room-selection">Select Room Preference</label>
+                    <select id="room-selection" name="room_preference" required>
+                        <option value="">Choose a Room from the List</option>
+                        <option value="connecting">Connecting</option>
+                        <option value="adjoining">Adjoining</option>
+                        <option value="adjacent">Adjacent</option>
+                    </select>
+                  </div>
+                <hr>
+                <div class="elem-group inlined">
+                  <label for="adult">Adults</label>
+                  <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                </div>
+                <div class="elem-group inlined">
+                  <label for="child">Children</label>
+                  <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+                </div>
+                <div class="elem-group inlined">
+                  <label for="checkin-date">Check-in Date</label>
+                  <input type="date" id="checkin-date" name="checkin" required>
+                </div>
+                <div class="elem-group inlined">
+                  <label for="checkout-date">Check-out Date</label>
+                  <input type="date" id="checkout-date" name="checkout" required>
+                </div>
+
+                <hr>
+                <div class="elem-group">
+                  <label for="message">Anything Else?</label>
+                  <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                </div>
+                <button type="submit">Book The Rooms</button>
+              </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-wrapper">
+            <div class="about-left">
+                <img src="img/logo.png" alt="">
+                <h2>"Eat Play Love and Rest."</h2>
+                <p>We promise beautiful moments, we promise exciting experiences,  and we promise shining memories like shining beached around Muskoka. </p>
+            </div>
+            <div class="about-right">
+                <img src="img/about-bg.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="event" id="event">
+        <div class="title">
+            <h2 class="titleText">Events</h2>
+        </div>
+
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#">
+                        <img src="img/barbeque.png" alt="">
+                        <div class="text">
+                            <h3>Barbeque</h3>
+                            <p>06.11 ~ 09.10</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#">
+                        <img src="img/fireworks.png" alt="">
+                        <div class="text">
+                            <h3>Fireworks</h3>
+                            <p>06.11 ~ 09.10 10pm</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#">
+                        <img src="img/brunch.png" alt="">
+                        <div class="text">
+                            <h3>Brunch AYCE</h3>
+                            <p>9am ~ 2pm</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="title">
+            <h2 class="titleText activity">Activities</h2>
+        </div>
+
+
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#">
+                        <img src="img/yoga.png" alt="">
+                        <div class="text">
+                            <h3>Yoga class</h3>
+                            <p>Mon ~ Fri 9am, 6pm</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#">
+                        <img src="img/swimming.png" alt="">
+                        <div class="text">
+                            <h3>Swimming class</h3>
+                            <p>Mon ~ Fri 10am</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <a href="#">
+                        <img src="img/kayak.png" alt="">
+                        <div class="text">
+                            <h3>Kayak</h3>
+                            <p>Everyday 9am ~ 6pm</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+
+
+    <section class="gallery" id="gallery">
+        <div>
+            <h2>Gallery</h2>
+        </div>
+
+        <div class="gallery-wrap">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="copyrightText">
+        <div class="footer-photo-wrapper">
+            <h3>Muko Resort Family</h3>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer-info-wrap">
+            <ul class="address">
+                <li>Address</li>
+                <li>1 muskoka street, ON</li>
+                <li>+1-123-456-7890</li>
+                <li>muko@moko.com</li>
+            </ul>
+            <ul class="social-media">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="footer-text">
+            © 2020 MUKO Resort
+        </div>
+    </footer>
+
+
+    <script text="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        var currentDateTime = new Date();
+        var year = currentDateTime.getFullYear();
+        var month = (currentDateTime.getMonth() + 1);
+        var date = (currentDateTime.getDate() + 1);
+
+        if(date < 10) {
+        date = '0' + date;
+        }
+        if(month < 10) {
+        month = '0' + month;
+        }
+
+        var dateTomorrow = year + "-" + month + "-" + date;
+        var checkinElem = document.querySelector("#checkin-date");
+        var checkoutElem = document.querySelector("#checkout-date");
+
+        checkinElem.setAttribute("min", dateTomorrow);
+
+        checkinElem.onchange = function () {
+            checkoutElem.setAttribute("min", this.value);
+        }
+
+
+
+    </script>
+</body>
+</html>
